@@ -1,5 +1,5 @@
 LANG=ja_JP.UTF-8; export LANG
-PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/home/nakayama/bin; export PATH
+PATH=/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:$HOME/bin; export PATH
 
 autoload -Uz compinit; compinit
 setopt auto_pushd
