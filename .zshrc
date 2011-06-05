@@ -8,5 +8,7 @@ setopt append_history
 setopt print_eight_bit
 setopt share_history
 
-
+PROMPT='['${WINDOW:+${WINDOW}|}$USER'@%M:%~]%# '
+RPROMPT='<%T>'
+PROMPT2='%_>'
 
