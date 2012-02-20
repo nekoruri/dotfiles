@@ -1,0 +1,12 @@
+#!/bin/sh
+
+DOTFILES=".vim .vimrc .zshrc"
+
+export PATH=/bin:/usr/bin:/usr/local/bin; export PATH
+git submodule init
+git submodule update
+for dotfile in $DOTFILES; do
+	if [ ! -e ~/$dotfile ]; then
+		ln -s dotfiles/$dotfile ~/$dotfile
+	fi
+done
