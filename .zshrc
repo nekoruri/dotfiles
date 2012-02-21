@@ -27,6 +27,7 @@ if [ -S "$agent" ]; then
 elif [ ! -S "$SSH_AUTH_SOCK" ]; then
     echo "no ssh-agent"
 elif [ ! -L "$SSH_AUTH_SOCK" ]; then
+    mkdir -p `dirname $agent`
     ln -snf "$SSH_AUTH_SOCK" $agent && export SSH_AUTH_SOCK=$agent
 fi
 
