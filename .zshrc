@@ -21,6 +21,8 @@ PROMPT='['${WINDOW:+${WINDOW}|}$USER'@%M:%~]%# '
 RPROMPT='<%T>'
 PROMPT2='%_>'
 
+REPORTTIME=30
+
 agent="$HOME/.tmp/ssh-agent/`hostname`"
 if [ -S "$agent" ]; then
     export SSH_AUTH_SOCK=$agent
