@@ -10,7 +10,9 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
+
+let g:neocomplcache_enable_at_startup = 1
 
 filetype plugin indent on
 
@@ -21,3 +23,4 @@ set modeline
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
 
+set ambiwidth=double
