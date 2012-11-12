@@ -37,3 +37,4 @@ fi
 
 [[ -s "/home/nakayama/.rvm/scripts/rvm" ]] && source "/home/nakayama/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+[[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
