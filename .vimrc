@@ -11,6 +11,8 @@ call vundle#rc()
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'tpope/vim-rails'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'w0ng/vim-hybrid'
 
 let g:neocomplcache_enable_at_startup = 1
 
@@ -28,3 +30,5 @@ set shiftwidth=4
 set expandtab
 
 set ambiwidth=double
+
+colorscheme hybrid
