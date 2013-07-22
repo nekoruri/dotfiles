@@ -13,6 +13,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'rking/ag.vim'
 
 let g:neocomplcache_enable_at_startup = 1
 
