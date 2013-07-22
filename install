@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOTFILES=".vim .vimrc .zshrc"
+DOTFILES=".vim .vimrc .zshrc .screenrc"
 
 export PATH=/bin:/usr/bin:/usr/local/bin; export PATH
 git submodule init

@@ -1,0 +1,16 @@
+term xterm-256color
+defbce "on"
+startup_message off
+vbell off
+autodetach on
+defhstatus "Screen[^En]: ^Et"
+escape ^z^z
+deflogin off
+defkanji utf8
+defencoding utf8
+shell -$SHELL
+
+defscrollback 2000
+caption always "%+0<%?%F%:%{= wr} %n %t%{ww}%?%?%F%{= wk}%:%{= ww}%? %-w%?%F%{=u db}%?%50>%n %t%{-}%+w%65< %=%?%F%{.b}%?%y/%m/%d(%D) %?%F%{.m}%?%c%?%F%{wd}%?%? [%0`]%?"
+
+
