@@ -75,6 +75,8 @@ fi
 
 [[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
+[[ -x "/usr/bin/ack-grep" ]] && alias ack="ack-grep"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 alias be="bundle exec"
