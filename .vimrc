@@ -32,5 +32,5 @@ set expandtab
 
 set ambiwidth=double
 
-"colorscheme hybrid
-colorscheme jellybeans
+colorscheme hybrid
+"colorscheme jellybeans
