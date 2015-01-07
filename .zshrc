@@ -82,6 +82,8 @@ if [ -d "$HOME/.pyenv/bin" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+[[ -s "$HOME/.nvm/nvm.sh" ]] && export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"
+
 [[ -x "/usr/bin/ack-grep" ]] && alias ack="ack-grep"
 
 alias be="bundle exec"
