@@ -10,7 +10,7 @@ defkanji utf8
 defencoding utf8
 shell -$SHELL
 
-defscrollback 2000
+defscrollback 200000
 caption always "%+0<%?%F%:%{= wr} %n %t%{ww}%?%?%F%{= wk}%:%{= ww}%? %-w%?%F%{=u db}%?%50>%n %t%{-}%+w%65< %=%?%F%{.b}%?%y/%m/%d(%D) %?%F%{.m}%?%c%?%F%{wd}%?%? [%0`]%?"
 
 
