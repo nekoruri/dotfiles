@@ -14,6 +14,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-pathogen'
+Bundle 'nvie/vim-flake8'
 
 let g:neocomplcache_enable_at_startup = 1
 
@@ -31,6 +33,10 @@ set shiftwidth=4
 set expandtab
 
 set ambiwidth=double
+set number
+set cursorline
 
-colorscheme hybrid
-"colorscheme jellybeans
+"colorscheme hybrid
+colorscheme jellybeans
+
+execute pathogen#infect()

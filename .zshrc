@@ -82,7 +82,11 @@ if [ -d "$HOME/.pyenv/bin" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+[[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
+
 [[ -s "$HOME/.nvm/nvm.sh" ]] && export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -x "/usr/bin/ack-grep" ]] && alias ack="ack-grep"
 
