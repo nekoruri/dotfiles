@@ -77,6 +77,8 @@ fi
 
 [[ -x "/usr/bin/ack-grep" ]] && alias ack="ack-grep"
 
+[[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 alias be="bundle exec"
