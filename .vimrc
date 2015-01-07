@@ -14,6 +14,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-pathogen'
 
 let g:neocomplcache_enable_at_startup = 1
 
@@ -34,3 +35,5 @@ set ambiwidth=double
 
 colorscheme hybrid
 "colorscheme jellybeans
+
+execute pathogen#infect()
