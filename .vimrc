@@ -33,8 +33,10 @@ set shiftwidth=4
 set expandtab
 
 set ambiwidth=double
+set number
+set cursorline
 
-colorscheme hybrid
-"colorscheme jellybeans
+"colorscheme hybrid
+colorscheme jellybeans
 
 execute pathogen#infect()
