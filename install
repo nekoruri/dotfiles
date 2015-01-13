@@ -11,3 +11,11 @@ for dotfile in $DOTFILES; do
 		ln -s dotfiles/$dotfile ~/$dotfile
 	fi
 done
+
+# .gitconfig
+if [ ! -e ~/.gitconfig ]; then
+    if hostname -f | egrep -q 'a4c\.jp$'; then
+        echo "~/.gitconfig"
+        ln -s dotfiles/.gitconfig.ca ~/.gitconfig
+    fi
+fi
