@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DOTFILES=".vim .vimrc .zshrc .screenrc"
 
