@@ -19,3 +19,11 @@ if [ ! -e ~/.gitconfig ]; then
         ln -s dotfiles/.gitconfig.ca ~/.gitconfig
     fi
 fi
+
+if [ ! -d $HOME/bin ]; then
+    mkdir $HOME/bin
+fi
+
+if [ ! -f $HOME/bin/echo-sd ]; then
+    ln -s $HOME/dotfiles/bin/echo-sd $HOME/bin/echo-sd
+fi
