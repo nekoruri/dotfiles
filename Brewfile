@@ -1,7 +1,9 @@
 cask_args apprid: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
+tap 'caskroom/fonts'
 tap 'homebrew/brewdler'
+tap 'TakuyaOkada/misc'
 
 brew 'brew-cask'
 
@@ -13,6 +15,21 @@ brew 'curl'
 brew 'awscli'
 brew 'gnupg'
 brew 'go'
+brew 'jenkins'
+brew 'maven'
+brew 'sonar'
+brew 'ruby'
+brew 'postgresql'
+brew 'imagemagick'
+brew 'pkg-config'
+brew 'subversionutf8', args: ['--with-unicode-path']
+brew 'android-sdk'
+brew 'gradle'
+brew 'nodebrew'
+brew 'ansible'
+brew 'pyenv'
+brew 'pandoc'
+brew 'direnv'
 
 cask 'java7'
 
@@ -31,6 +48,8 @@ cask 'limechat'
 cask 'google-cloud-sdk'
 cask 'google-photos-backup'
 cask 'atom'
+cask 'gimp'
+#cask 'font-source-han-code-jp'
 
 # ATOK
 
