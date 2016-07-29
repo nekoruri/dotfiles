@@ -100,6 +100,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -x "/usr/bin/ack-grep" ]] && alias ack="ack-grep"
 
+[[ -x "/usr/local/bin/direnv" ]] && eval "$(direnv hook zsh)"
+
 alias be="bundle exec"
 
 
