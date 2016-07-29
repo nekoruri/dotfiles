@@ -82,6 +82,12 @@ if [ -d "$HOME/.pyenv/bin" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+if [ -d "$HOME/.pyenv/shims" ]; then
+    export PATH="$HOME/.pyenv/shims:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
 
 [[ -s "$HOME/.nvm/nvm.sh" ]] && export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"
