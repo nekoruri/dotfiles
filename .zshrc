@@ -76,6 +76,8 @@ fi
 
 [[ -d "$HOME/.rbenv/bin" ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
+[[ -d "$HOME/.nodebrew/current/bin" ]] && export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
 if [ -d "$HOME/.pyenv/bin" ]; then
     export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
