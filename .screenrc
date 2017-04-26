@@ -5,7 +5,7 @@ vbell off
 autodetach on
 defhstatus "Screen[^En]: ^Et"
 escape ^z^z
-deflogin off
+#deflogin off
 defkanji utf8
 defencoding utf8
 shell -$SHELL
