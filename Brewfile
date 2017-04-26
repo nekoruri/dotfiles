@@ -4,6 +4,7 @@ tap 'caskroom/versions'
 tap 'caskroom/fonts'
 tap 'homebrew/brewdler'
 tap 'TakuyaOkada/misc'
+tap 'soracom/soracom-cli'
 
 brew 'brew-cask'
 
@@ -30,6 +31,7 @@ brew 'ansible'
 brew 'pyenv'
 brew 'pandoc'
 brew 'direnv'
+brew 'soracom-cli'
 
 cask 'java7'
 
