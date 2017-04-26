@@ -18,6 +18,8 @@ Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-pathogen'
 Bundle 'nvie/vim-flake8'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'scrooloose/syntastic'
+
 
 let g:neocomplcache_enable_at_startup = 1
 
