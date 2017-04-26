@@ -31,6 +31,7 @@ brew 'ansible'
 brew 'pyenv'
 brew 'pandoc'
 brew 'direnv'
+brew 'rbenv'
 brew 'soracom-cli'
 
 cask 'java7'
