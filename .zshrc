@@ -90,8 +90,6 @@ if [ -d "$HOME/.pyenv/shims" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
-[[ -d "$HOME/usr/terraform" ]] && export PATH="$HOME/usr/terraform:$PATH"
-
 [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
 
 [[ -s "$HOME/.nvm/nvm.sh" ]] && export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"
