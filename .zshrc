@@ -102,5 +102,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 alias be="bundle exec"
 
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 
 
