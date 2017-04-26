@@ -6,7 +6,7 @@ tap 'homebrew/brewdler'
 tap 'TakuyaOkada/misc'
 tap 'soracom/soracom-cli'
 
-brew 'brew-cask'
+#brew 'brew-cask'
 
 brew 'git'
 brew 'jq'
