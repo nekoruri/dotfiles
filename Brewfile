@@ -5,6 +5,7 @@ tap 'caskroom/fonts'
 tap 'homebrew/brewdler'
 tap 'TakuyaOkada/misc'
 tap 'soracom/soracom-cli'
+tap 'knqyf263/pet'
 
 #brew 'brew-cask'
 
@@ -33,6 +34,7 @@ brew 'pandoc'
 brew 'direnv'
 brew 'rbenv'
 brew 'soracom-cli'
+brew 'pet'
 
 cask 'java7'
 
