@@ -18,11 +18,11 @@ setopt extended_history
 setopt share_history
 function history-all { history -E 1 }
 
-# http://d.hatena.ne.jp/uasi/20091025/1256458798
-VCS_INFO_get_data_git 2> /dev/null
+# https://www.yuuan.net/item/522
+# https://gist.github.com/yuuan/3136632
+autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
 setopt prompt_subst
-setopt re_match_pcre
 
 function rprompt-git-current-branch {
         local name st color gitdir action
@@ -38,17 +38,16 @@ function rprompt-git-current-branch {
         action=`VCS_INFO_git_getaction "$gitdir"` && action="($action)"
 
         st=`git status 2> /dev/null`
-	if [[ "$st" =~ "(?m)^nothing to" ]]; then
+    if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
                 color=%F{green}
-	elif [[ "$st" =~ "(?m)^nothing added" ]]; then
+    elif [[ -n `echo "$st" | grep "^no changes added"` ]]; then
                 color=%F{yellow}
-	elif [[ "$st" =~ "(?m)^# Untracked" ]]; then
+    elif [[ -n `echo "$st" | grep "^# Changes to be committed"` ]]; then
                 color=%B%F{red}
         else
-                 color=%F{red}
-         fi
+                color=%F{red}
+        fi
 
-              
         echo "$color$name$action%f%b "
 }
 #
