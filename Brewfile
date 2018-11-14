@@ -1,9 +1,9 @@
-cask_args apprid: '/Applications'
+# cask_args apprid: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 tap 'caskroom/fonts'
 tap 'homebrew/brewdler'
-tap 'TakuyaOkada/misc'
+#tap 'takuyao/misc'
 tap 'soracom/soracom-cli'
 tap 'knqyf263/pet'
 
@@ -35,8 +35,15 @@ brew 'direnv'
 brew 'rbenv'
 brew 'soracom-cli'
 brew 'pet'
+brew 'phantomjs'
+brew 'azure-cli'
+brew 'dash'
+brew 'pandoc'
 
+cask 'java8'
 cask 'java7'
+
+brew 'apache-spark'
 
 cask 'google-chrome'
 cask 'dropbox'
@@ -55,6 +62,7 @@ cask 'google-photos-backup'
 cask 'atom'
 cask 'gimp'
 #cask 'font-source-han-code-jp'
+#cask 'google-chrome-canary'
 
 # ATOK
 
