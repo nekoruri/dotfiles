@@ -105,4 +105,17 @@ alias be="bundle exec"
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
+autoload bashcompinit && bashcompinit
+source '/Users/masa/lib/azure-cli/az.completion'
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/masa/.nodebrew/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/masa/.nodebrew/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/masa/.nodebrew/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/masa/.nodebrew/node/v6.11.5/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+
+[[ -f /Users/masa/usr/google-cloud-sdk/completion.zsh.inc ]] && . /Users/masa/usr/google-cloud-sdk/completion.zsh.inc
+[[ -f /Users/masa/usr/google-cloud-sdk/path.zsh.inc ]] && . /Users/masa/usr/google-cloud-sdk/path.zsh.inc
