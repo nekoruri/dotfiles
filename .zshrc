@@ -18,11 +18,11 @@ setopt extended_history
 setopt share_history
 function history-all { history -E 1 }
 
-# http://d.hatena.ne.jp/uasi/20091025/1256458798
-VCS_INFO_get_data_git 2> /dev/null
+# https://www.yuuan.net/item/522
+# https://gist.github.com/yuuan/3136632
+autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
 setopt prompt_subst
-#setopt re_match_pcre
 
 function rprompt-git-current-branch {
         local name st color gitdir action
