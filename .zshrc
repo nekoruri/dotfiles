@@ -83,13 +83,17 @@ fi
 if [ -d "$HOME/.pyenv/bin" ]; then
     export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 if [ -d "$HOME/.pyenv/shims" ]; then
     export PATH="$HOME/.pyenv/shims:$PATH"
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh 
