@@ -102,7 +102,7 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
 autoload bashcompinit && bashcompinit
-source '/Users/masa/lib/azure-cli/az.completion'
+[[ -f "$HOME/lib/azure-cli/az.completion" ]] && source "$HOME/lib/azure-cli/az.completion"
 
 
 # tabtab source for serverless package
