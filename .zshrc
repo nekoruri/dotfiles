@@ -129,3 +129,5 @@ source '/Users/masa/lib/azure-cli/az.completion'
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
+
+[[ -d  "/mnt/c/Program\ Files/Docker/Docker/resources/bin" ]] && export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
