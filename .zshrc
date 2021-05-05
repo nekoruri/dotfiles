@@ -127,3 +127,5 @@ source '/Users/masa/lib/azure-cli/az.completion'
 [[ -f /Users/masa/usr/google-cloud-sdk/path.zsh.inc ]] && . /Users/masa/usr/google-cloud-sdk/path.zsh.inc
 
 export PATH="$HOME/.tfenv/bin:$PATH"
+
+eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
