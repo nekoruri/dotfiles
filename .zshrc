@@ -61,16 +61,6 @@ PROMPT2='%_>'
 
 REPORTTIME=30
 
-agent="$HOME/.tmp/ssh-agent/`hostname`"
-if [ -S "$agent" ]; then
-    export SSH_AUTH_SOCK=$agent
-elif [ ! -S "$SSH_AUTH_SOCK" ]; then
-    echo "no ssh-agent"
-elif [ ! -L "$SSH_AUTH_SOCK" ]; then
-    mkdir -p `dirname $agent`
-    ln -snf "$SSH_AUTH_SOCK" $agent && export SSH_AUTH_SOCK=$agent
-fi
-
 [[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
