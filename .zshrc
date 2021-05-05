@@ -131,3 +131,7 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
 
 [[ -d  "/mnt/c/Program\ Files/Docker/Docker/resources/bin" ]] && export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
