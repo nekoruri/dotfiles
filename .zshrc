@@ -121,7 +121,7 @@ if [ ! -z "$WSL_DISTRO_NAME" ]; then
 fi
 export PATH="$HOME/.tfenv/bin:$PATH"
 
-eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
+[[ -f /home/linuxbrew/.linuxbrew/bin/brew ]] && eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
 
 [[ -d  "/mnt/c/Program\ Files/Docker/Docker/resources/bin" ]] && export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 
