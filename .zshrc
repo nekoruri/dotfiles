@@ -61,16 +61,6 @@ PROMPT2='%_>'
 
 REPORTTIME=30
 
-agent="$HOME/.tmp/ssh-agent/`hostname`"
-if [ -S "$agent" ]; then
-    export SSH_AUTH_SOCK=$agent
-elif [ ! -S "$SSH_AUTH_SOCK" ]; then
-    echo "no ssh-agent"
-elif [ ! -L "$SSH_AUTH_SOCK" ]; then
-    mkdir -p `dirname $agent`
-    ln -snf "$SSH_AUTH_SOCK" $agent && export SSH_AUTH_SOCK=$agent
-fi
-
 [[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
@@ -112,7 +102,7 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
 autoload bashcompinit && bashcompinit
-source '/Users/masa/lib/azure-cli/az.completion'
+[[ -f "$HOME/lib/azure-cli/az.completion" ]] && source "$HOME/lib/azure-cli/az.completion"
 
 
 # tabtab source for serverless package
@@ -129,7 +119,22 @@ source '/Users/masa/lib/azure-cli/az.completion'
 if [ ! -z "$WSL_DISTRO_NAME" ]; then
     export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 fi
+export PATH="$HOME/.tfenv/bin:$PATH"
+
+eval $($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)
+
+[[ -d  "/mnt/c/Program\ Files/Docker/Docker/resources/bin" ]] && export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# ssh-agent proxy for WSL2
+if [[ ! -z "$WSL_DISTRO_NAME" && -x "$HOME/.ssh/wsl2-ssh-pageant.exe" ]]; then
+	export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+	ss -a | grep -q $SSH_AUTH_SOCK
+	if [ $? -ne 0 ]; then
+		rm -f $SSH_AUTH_SOCK
+		(setsid nohup socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:$HOME/.ssh/wsl2-ssh-pageant.exe >/dev/null 2>&1 &)
+	fi
+fi

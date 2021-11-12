@@ -31,9 +31,9 @@ set modeline
 " http://masaoo.blogspot.com/2009/08/ubuntu-vim-vimrc.html
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 set ambiwidth=double
