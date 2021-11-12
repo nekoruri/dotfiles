@@ -125,3 +125,11 @@ source '/Users/masa/lib/azure-cli/az.completion'
 
 [[ -f /Users/masa/usr/google-cloud-sdk/completion.zsh.inc ]] && . /Users/masa/usr/google-cloud-sdk/completion.zsh.inc
 [[ -f /Users/masa/usr/google-cloud-sdk/path.zsh.inc ]] && . /Users/masa/usr/google-cloud-sdk/path.zsh.inc
+
+if [ ! -z "$WSL_DISTRO_NAME" ]; then
+    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+fi
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
