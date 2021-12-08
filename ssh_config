@@ -1,0 +1,5 @@
+Host gitlab.pkan.org
+    Port 10001
+
+Host *
+    IPQoS none
