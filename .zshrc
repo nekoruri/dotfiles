@@ -138,3 +138,13 @@ if [[ ! -z "$WSL_DISTRO_NAME" && -x "$HOME/.ssh/wsl2-ssh-pageant.exe" ]]; then
 		(setsid nohup socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:$HOME/.ssh/wsl2-ssh-pageant.exe >/dev/null 2>&1 &)
 	fi
 fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/masa/.nodebrew/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
