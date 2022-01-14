@@ -1,0 +1,18 @@
+
+# Desktop apps
+cask 'firefox'
+cask 'visual-studio-code'
+cask 'docker'
+cask 'mi'
+cask 'iterm2'
+cask 'clipy'
+
+# CLI
+brew 'zsh-completions'
+brew 'jq'
+brew 'pure'
+brew 'fzf'
+brew 'asdf'
+brew 'awscli'
+brew 'aws-cdk'
+brew 'pipx'
