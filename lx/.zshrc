@@ -35,4 +35,5 @@ autoload -Uz compinit && compinit
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export EDITOR=vim
 export PATH="$PATH:$HOME/.local/bin"
