@@ -35,6 +35,4 @@ autoload -Uz compinit && compinit
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# Created by `pipx` on 2022-01-07 08:11:23
-export PATH="$PATH:/Users/masahiro.nakayama/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
