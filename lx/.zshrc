@@ -43,7 +43,8 @@ autoload -Uz compinit && compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export EDITOR=vim
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin"
+
 
 # ssh-agent proxy for WSL2
 if [[ ! -z "$WSL_DISTRO_NAME" && -x "$HOME/.ssh/wsl2-ssh-pageant.exe" ]]; then
