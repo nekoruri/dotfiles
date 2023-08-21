@@ -1,5 +1,14 @@
 setopt share_history
 
+
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=1000000
+setopt EXTENDED_HISTORY
+setopt share_history
+
+bindkey -e
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -35,6 +44,19 @@ autoload -Uz compinit && compinit
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ -x "/usr/bin/fzf" ]]; then
+  incremental_search_history() {
+    selected=`history -E 1 | fzf | cut -b 26-`
+    BUFFER=`[ ${#selected} -gt 0 ] && echo $selected || echo $BUFFER`
+    CURSOR=${#BUFFER}
+    zle redisplay
+  }
+  zle -N incremental_search_history
+  bindkey "^R" incremental_search_history
+fi
+
+export EDITOR=vim
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin"
 
 # gh
 [ -x /opt/homebrew/bin/gh ] && eval "$(gh completion -s zsh)"
@@ -50,3 +72,13 @@ fi
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/bin"
 export GPG_TTY=$(tty)
+
+# ssh-agent proxy for WSL2
+if [[ ! -z "$WSL_DISTRO_NAME" && -x "$HOME/.ssh/wsl2-ssh-pageant.exe" ]]; then
+	export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+	ss -a | grep -q $SSH_AUTH_SOCK
+	if [ $? -ne 0 ]; then
+		rm -f $SSH_AUTH_SOCK
+		(setsid nohup socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:$HOME/.ssh/wsl2-ssh-pageant.exe >/dev/null 2>&1 &)
+	fi
+fi
