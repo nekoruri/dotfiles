@@ -31,10 +31,22 @@ zinit light sindresorhus/pure
 zinit light asdf-vm/asdf
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
+[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ] && source /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# gh
+[ -x /opt/homebrew/bin/gh ] && eval "$(gh completion -s zsh)"
 
-# Created by `pipx` on 2022-01-07 08:11:23
-export PATH="$PATH:/Users/masahiro.nakayama/.local/bin"
+# gcloud
+[ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ] && source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+[ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ] && source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+# ngrok
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin"
+export GPG_TTY=$(tty)
