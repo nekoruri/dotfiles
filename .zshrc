@@ -151,3 +151,5 @@ fi
 
 # direnv
 eval "$(direnv hook zsh)"
+
+export PATH="$HOME/.tfenv/bin:$PATH:$HOME/.local/bin"
