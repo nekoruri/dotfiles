@@ -1,0 +1,26 @@
+
+# Desktop apps
+cask 'clipy'
+cask 'docker'
+cask 'firefox'
+cask 'iterm2'
+cask 'mi'
+cask 'raycast'
+cask 'visual-studio-code'
+cask 'google-cloud-sdk'
+
+# CLI
+brew 'act'
+brew 'asdf'
+brew 'aws-cdk'
+brew 'aws-sso-util'
+brew 'awscli'
+brew 'fzf'
+brew 'gh'
+brew 'go'
+brew 'jq'
+brew 'pure'
+brew 'pipx'
+brew 'ripgrep'
+brew 'zsh-completions'
+brew 'ynqa/tap/jnv'
